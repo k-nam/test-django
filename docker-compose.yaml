@@ -4,7 +4,7 @@ services:
     image: mysql:8.0
     restart: always
     environment:
-      MYSQL_DATABASE: django
+      MYSQL_DATABASE: mysite
       MYSQL_USER: u
       MYSQL_PASSWORD: p
       MYSQL_ROOT_PASSWORD: root
