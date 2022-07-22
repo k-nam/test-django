@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  mysql:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: django
+      MYSQL_USER: u
+      MYSQL_PASSWORD: p
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - db-data:/var/lib/mysql
+      - ./volumes/mysql/logs:/var/log/mysql
+    expose:
+      - "3306"
+    ports:
+      - "13306:3306"
+
+volumes:
+    db-data:
+
